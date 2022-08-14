@@ -1,0 +1,46 @@
+<div *ngIf="selectedUser === undefined">
+    <div class="tabHeader">
+        Users
+    </div>
+    <div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>User Email ID</th>
+                    <th class="actionTh"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of user">
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td><button class="btn btn-link" (click)="edit(item)">Edit</button> | <button class="btn btn-link"
+                            (click)="confirmDelete(item)">Delete</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-edit-user *ngIf="selectedUser !== undefined"> </app-edit-user>
+
+<dialog class="dlgPopup" id="dlgUserManageId">
+    <div class="dlgHeader">
+        Confirm User Deletion
+        <button type="button" class="btn-close floatRight" (click)="close()"></button>
+    </div>
+    <div class="row rowMargin"></div>
+    <div class="row rowMargin">
+        <div class="col-12 centerContent">
+            <img src="../../assets/question.png" width="32px" height="32px"/> Are you Sure ?
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-6">
+            <button type="submit" class="btn btn-light floatRight" (click)="deleteUser()"> Ok</button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-light" (click)="close();">Cancel</button>
+        </div>
+    </div>
+</dialog>

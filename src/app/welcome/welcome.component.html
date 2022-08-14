@@ -1,0 +1,34 @@
+<div class="tabHeader centerContent">
+    Welcome To User Module
+</div>
+<div class="centerContent">
+
+    <div class="row rowMargin">
+        <div class="col-12">
+            Existing User
+        </div>
+    </div>
+
+    <div class="row rowMargin">
+        <div class="col-12">
+            <button type="button" class="btn btn-light" [routerLink]="['/login']">Login</button>
+        </div>
+    </div>
+
+    <div class="row rowMargin">
+        <div class="col-12">
+            New User
+        </div>
+    </div>
+
+    <div class="row rowMargin">
+        <div class="col-12">
+            <button type="button" class="btn btn-light" [routerLink]="['/register']">Register</button>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="logout" class="logoutText">
+    You have been logged out.
+</div>

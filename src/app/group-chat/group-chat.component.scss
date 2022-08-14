@@ -1,0 +1,48 @@
+button.textBox {
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+button.close {
+    border: 1px solid black;
+    float:right;
+    margin-right: 5px;
+}
+
+.chatDiv{
+    display:block;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.textDiv {
+    border: 1px solid black;
+    border-radius: 5px ;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   
+} 
+
+.userName {
+    margin-right: 10px;
+}
+
+.TextBox {
+    margin-right: 10px;
+    border: 1px solid black;
+}
+
+.chatDisplay {
+    border: 1px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 250px;
+}

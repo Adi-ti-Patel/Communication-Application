@@ -1,0 +1,15 @@
+<div class="navTab">
+    <div (click)="onSelectTab('GroupChat')" [ngClass]="tab == 'GroupChat' ? 'selected' : ''">Group Chat</div>
+    <div (click)="onSelectTab('ManageUser')" [ngClass]="tab == 'ManageUser' ? 'selected' : ''">Manage Users</div>
+    <div (click)="onSelectTab('ManageDocs')" [ngClass]="tab == 'ManageDocs' ? 'selected' : ''">Manage Documents</div>
+    <div (click)="onSelectTab('Logout')" [ngClass]="tab == 'Logout' ? 'selected' : ''">Logout</div>
+</div>
+<div class="tabContent">
+    <app-login-successful *ngIf="tab === ''"></app-login-successful>
+
+    <app-users-management *ngIf="tab === 'ManageUser'"></app-users-management>
+
+    <app-group-chat *ngIf="tab === 'GroupChat'"></app-group-chat>
+
+    <app-docs-management *ngIf="tab === 'ManageDocs'"></app-docs-management>
+</div>

@@ -3,10 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { LoginComponent } from './login/login.component';
+import { LoginSuccessfulComponent } from './login-successful/login-successful.component';
+import { RegisterComponent } from './register/register.component';
+import { RegisterSuccessfulComponent } from './register-successful/register-successful.component';
+import { UsersManagementComponent } from './users-management/users-management.component';
+import { GroupChatComponent } from './group-chat/group-chat.component';
+import { DocsManagementComponent } from './docs-management/docs-management.component';
+import { MainComponent } from './main/main.component';
+import { EditUserComponent } from './users-management/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    LoginComponent,
+    LoginSuccessfulComponent,
+    RegisterComponent,
+    RegisterSuccessfulComponent,
+    UsersManagementComponent,
+    GroupChatComponent,
+    DocsManagementComponent,
+    MainComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,

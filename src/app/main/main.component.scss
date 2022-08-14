@@ -1,0 +1,26 @@
+.navTab {
+    overflow: hidden;
+}
+
+.navTab div {
+    float: left;
+    padding: 10px;
+    border: 1px solid black;
+    width: 25%;
+    text-align: center;
+    background-color: grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.navTab .selected {
+    background-color: lightgrey;
+    border-bottom: 1px solid lightgrey;
+    cursor: default;
+}
+
+.tabContent {
+    padding: 10px;
+    margin-top: 10px;
+}

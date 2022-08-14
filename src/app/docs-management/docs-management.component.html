@@ -1,0 +1,102 @@
+<div class="tabHeader">
+    My Uploads
+</div>
+<div class="document">
+    <table class="table table-striped table-hover doc">
+        <thead>
+            <tr>
+                <th> Label </th>
+                <th class="docsManage">File Name</th>
+                <th class="docsManage"> Action </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of docs">
+                <td>{{item.Label}}</td>
+                <td class="docsManage">{{item.FileName}}</td>
+                <td class="docsManage"> <button class="btn btn-link" (click)="edit(item)">Edit</button> | <button class="btn btn-link" (click)="delete()">Delete</button> | <button class="btn btn-link" (click)="share(item)">Share</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <button type="button" class="btn btn-light rounded addUploadButton uploadButton" (click)="upload();"> + Add Upload</button>
+</div>
+
+
+<dialog class="dlgPopup" id="dlgUploadFileId">
+    <div class="dlgHeader">
+        Upload
+        <button type="button" class="btn-close floatRight" (click)="close('dlgUploadFileId')"></button>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-4">
+            File Description
+        </div>
+        <div class="col-8">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowMargin">
+        <div class="col-4">
+            File Upload
+        </div>
+        <div class="col-8">
+            <input type="file" class="form-control" placeholder="ChooseFile">
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-6">
+            <button type="submit" class="btn btn-light floatRight">Upload Now</button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-light" (click)="close('dlgUploadFileId');">Cancel</button>
+        </div>
+    </div>
+</dialog>
+
+<dialog id="dlgEditFileId" class="dlgPopup">
+    <div class="dlgHeader">
+        Edit
+        <button type="button" class="btn-close floatRight" (click)="close('dlgEditFileId')"></button>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-4">
+            File Description
+        </div>
+        <div class="col-8">
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+    <div class="row rowMargin">
+        <div class="col-6">
+            <button type="submit" class="btn btn-light floatRight"> Save</button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-light" (click)="close('dlgEditFileId');">Cancel</button>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="dlgPopup" id="dlgDeleteConfirmId">
+    <div class="dlgHeader">
+        Confirm User Deletion
+        <button type="button" class="btn-close floatRight" (click)="close('dlgDeleteConfirmId')"></button>
+    </div>
+    <div class="row rowMargin"></div>
+    <div class="row rowMargin">
+        <div class="col-12 centerContent">
+            <img src="../../assets/question.png" width="32px" height="32px"/> Are you Sure ?
+        </div>
+    </div>
+    <div class="row rowMargin">
+        <div class="col-6">
+            <button type="submit" class="btn btn-light floatRight"> Ok</button>
+        </div>
+        <div class="col-6">
+            <button type="button" class="btn btn-light" (click)="close('dlgDeleteConfirmId');">Cancel</button>
+        </div>
+    </div>
+</dialog>
